@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import Navigation from './components/navigation';
+import Main from './components/main';
+import Footer from './components/footer';
 
 function App() {
   return (
-    <div className="App">
-      <h2>This is going to be the Little Lemon app</h2>
-    </div>
+    <>
+      <Header></Header> 
+      <Navigation></Navigation>
+      <Main></Main>
+      <Footer></Footer>
+    </>
   );
 }
 
