@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header, nav, main, footer {
+  display: block;
+  border: 1px solid black;
+}
+
+header img {
+  display: block;
+  margin: auto;
+  width:100px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  text-decoration: none;
+}
+
+main {
+  height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+}

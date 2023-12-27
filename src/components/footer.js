@@ -1,7 +1,7 @@
 function Footer (){
     return (
         <footer>
-            <h2>This is the Footer!</h2>
+            <p>Copyright Little Lemon Restaurant. 2023 All rights reserved.</p>
         </footer>
     );
 }
