@@ -1,8 +1,10 @@
-function Header (){
+import Navigation from "./navigation";
+
+function Header (props){
     return (
         <header>
-            <h2>This is the Header!</h2>
-            <img src=".assets/logo.png" alt="Little Lemon Logo" />
+            <img src="assets/Logo.svg" alt="Little Lemon Logo" />
+            <Navigation />
         </header>
     );
 }

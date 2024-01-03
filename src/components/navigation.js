@@ -2,10 +2,12 @@ function Navigation (){
     return (
         <nav>
             <ul>
-                <li>Nav Item 1</li>
-                <li>Nav Item 2</li>
-                <li>Nav Item 3</li>
-                <li>Nav Item 4</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Reservations</a></li>
+                <li><a href="#">Order Online</a></li>
+                <li><a href="#">Login</a></li>
             </ul>    
         </nav>
     );

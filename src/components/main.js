@@ -1,9 +1,18 @@
-function Main (){
+import Hero from './hero';
+import Specials from './specials'
+import Testemonials from './testemonials'
+import About from './about'
+
+function Main () {
+
     return (
         <main>
-            <h2>This is the Main area!</h2>
+            <Hero></Hero>
+            <Specials></Specials>
+            <Testemonials></Testemonials>
+            <About></About>
         </main>
     );
 }
 
-export default Main
+export default Main;

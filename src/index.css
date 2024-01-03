@@ -12,35 +12,244 @@ code {
     monospace;
 }
 
-header, nav, main, footer {
+header, main, footer {
   display: block;
-  border: 1px solid black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #F4CE14;
+}
+
+button {
+  background-color: #F4CE14;
+  font-weight: bold;
+  width: 150px;
+  height: 35px;
+  border-radius: 16px;
+  box-shadow: 0px;
+}
+
+header {
+  height: 50px;
+  display: flex;
 }
 
 header img {
   display: block;
+  margin: 5px auto;
+}
+
+nav {
+  text-align: center;
+  background-color:#F4CE14;
+  color: black;
   margin: auto;
-  width:100px;
+  border-radius: 16px;
 }
 
 nav ul {
   display: flex;
+  margin: auto;
+  width: 500px;
+  height: 30px;
+  
 }
 
 nav li {
+  list-style: none;
+  padding: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+nav a, nav a:active, nav a:visited {
+  color: black;
   text-decoration: none;
 }
 
-main {
-  height: 100%;
+nav a:hover {
+  color: white;
+  background-color: black;
+}
+
+.wrapper {
+  padding: 0 10%;
+}
+
+.wrapper div {
+  border: 1px solid black;
+}
+
+#hero {
+  background-color: rgb(73, 94, 87);
+  padding: 10px;
+}
+
+#hero .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  justify-content: right;
+  align-content: right;
+}
+
+#hero .wrapper section {
+  border: 1px solid yellow;
+}
+
+#hero img {
+  width: 500px;
+  margin: auto;
+}
+
+#specials {
+  margin-bottom: 20px;
+}
+
+.specials-title {
+  display: flex;
+  margin: auto;
+}
+
+.specials-title div {
+  display: block;
+  
+  margin: auto;
+  
+}
+
+.specials-title div:first-child {
+  text-align: left;
+}
+
+.specials-title div:last-child {
+  text-align: right;
+}
+
+#specials img {
+  width: 413px;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+#specials .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, 500px);
+}
+
+.specials-card {
+  border: 1px solid black;
+  border-radius: 16px;
+}
+
+.specials-card a, 
+.specials-card p,
+.specials-card h2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#Testemonials {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  background-color: rgb(73, 94, 87);
+}
+
+#Testemonials > h2 {
+  display: block;
+  text-align: center;
+}
+
+#Testemonials .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#Testemonials section {
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+#about {
+  margin: 20px 0;
+}
+
+#about .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#about section {
+  border: 1px solid red;
+}
+
+#about img {
+  width: 300px;
+  border-radius: 16px;
+}
+
+main form {
+  display: grid; 
+  max-width: 200px; 
+  gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
   width: 100%;
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  background-color: rgb(73, 94, 87);
+}
+
+footer .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+footer img {
+  width: 300px;
+  border-radius: 16px;
 }
 
 footer p {
   text-align: center;
+}
+
+footer h2 {
+  margin-bottom: -5px;
+}
+
+footer hr {
+  height: 1px;
+  border: none;
+  background-color: #F4CE14;
+}
+
+footer ul {
+  margin-left: -35px;
+}
+
+footer li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+footer a,
+footer a:active,
+footer a:visited {
+  color:#F4CE14;
+  text-decoration: none;
 }
