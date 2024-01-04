@@ -6,12 +6,15 @@ import About from './about'
 function Main () {
 
     return (
-        <main>
-            <Hero></Hero>
+        <>
+
+            
+
+            
             <Specials></Specials>
             <Testemonials></Testemonials>
             <About></About>
-        </main>
+        </>
     );
 }
 

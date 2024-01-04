@@ -10,7 +10,9 @@ function Hero () {
                     <button>Reserve a Table</button>
                 </section>
                 <section>
-                    <img src="assets/restaurant.jpg" alt="restaurant" />
+                    <div className="center-image">
+                        <img src="assets/restaurant.jpg" alt="restaurant" />
+                    </div>
                 </section>
             </div>
         </div>

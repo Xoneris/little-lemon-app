@@ -3,7 +3,9 @@ function Footer (){
         <footer>
             <div className="wrapper">
                 <section>
-                    <img src="./assets/restauranfood.jpg" alt="Footer Image" />
+                    <div className="center-image">
+                        <img src="./assets/restauranfood.jpg" alt="Footer Image" />
+                    </div>
                 </section>
                 <section>
                     <h2>Doormat Navigation</h2>

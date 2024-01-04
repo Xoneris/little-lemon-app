@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:lightgray;
 }
 
 code {
@@ -18,6 +19,7 @@ header, main, footer {
 
 h1, h2, h3, h4, h5, h6 {
   color: #F4CE14;
+  text-shadow: 3px 1px 1px black;
 }
 
 button {
@@ -30,7 +32,8 @@ button {
 }
 
 header {
-  height: 50px;
+  height: 60px;
+  padding: 5px 0;
   display: flex;
 }
 
@@ -40,6 +43,7 @@ header img {
 }
 
 nav {
+  width: 30%;
   text-align: center;
   background-color:#F4CE14;
   color: black;
@@ -57,8 +61,7 @@ nav ul {
 
 nav li {
   list-style: none;
-  padding: 5px;
-  border: 1px solid black;
+  padding: 5px 10px;
   text-align: center;
 }
 
@@ -76,10 +79,6 @@ nav a:hover {
   padding: 0 10%;
 }
 
-.wrapper div {
-  border: 1px solid black;
-}
-
 #hero {
   background-color: rgb(73, 94, 87);
   padding: 10px;
@@ -87,24 +86,23 @@ nav a:hover {
 
 #hero .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   justify-content: right;
   align-content: right;
 }
 
-#hero .wrapper section {
-  border: 1px solid yellow;
-}
-
 #hero img {
-  width: 500px;
+  width: 80%;
   margin: auto;
+  border-radius: 16px;
 }
 
 #specials {
   margin-bottom: 20px;
+  display: block;
+  margin:auto;
 }
 
 .specials-title {
@@ -114,9 +112,7 @@ nav a:hover {
 
 .specials-title div {
   display: block;
-  
   margin: auto;
-  
 }
 
 .specials-title div:first-child {
@@ -128,8 +124,8 @@ nav a:hover {
 }
 
 #specials img {
-  width: 413px;
-  height: 300px;
+  width: 100%;
+  height: 50%;
   object-fit: cover;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -137,9 +133,9 @@ nav a:hover {
 
 #specials .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(100px, 500px);
+  grid-auto-rows: minmax(100px, auto);
 }
 
 .specials-card {
@@ -167,7 +163,7 @@ nav a:hover {
 
 #Testemonials .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
@@ -178,54 +174,79 @@ nav a:hover {
   padding: 10px;
 }
 
+#Testemonials p {
+  font-style: italic;
+}
+
 #about {
   margin: 20px 0;
 }
 
 #about .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
-#about section {
-  border: 1px solid red;
-}
-
 #about img {
-  width: 300px;
+  width: 80%;
   border-radius: 16px;
 }
 
-main form {
-  display: grid; 
-  max-width: 200px; 
-  gap: 20px;
-  grid-auto-rows: minmax(100px, auto);
+#bookingForm {
+  display: block;
+  width: 500px;
+  margin: 10px auto;
+  border: 1px solid black;
+  padding-bottom: 10px;
+}
+
+#bookingForm .wrapper {
+  display: grid;
+  text-align: center;
+}
+
+#bookingForm label {
+  padding-right: 10px;
+}
+
+#bookingForm input,
+#bookingForm select {
+  border-radius: 16px;
+  padding: 5px;
+  min-width: 100px;
 }
 
 footer {
   width: 100%;
   margin: 10px 0 0 0;
-  padding: 10px 0 0 0;
+  padding: 10px 0 10px 0;
   background-color: rgb(73, 94, 87);
 }
 
 footer .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
 
 footer img {
-  width: 300px;
+  width: 80%;
+  object-fit: cover;
   border-radius: 16px;
 }
 
+.center-image {
+  display: flex;
+  justify-content: center;
+}
+
 footer p {
+  color: white;
   text-align: center;
+  margin: 0;
 }
 
 footer h2 {
@@ -252,4 +273,62 @@ footer a:active,
 footer a:visited {
   color:#F4CE14;
   text-decoration: none;
+}
+
+/* Responsive Section */
+
+@media (min-width: 700px){
+  #specials .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  #hero .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: right;
+    align-content: right;
+  }
+  #Testemonials .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  #about .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  footer .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+
+@media (min-width: 1000px){
+  #specials .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  #Testemonials .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  footer .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
 }
