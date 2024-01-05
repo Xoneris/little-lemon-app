@@ -309,6 +309,14 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.successMessage {
+  color: green;
+}
+
+.errorMessage {
+  color: red;
+}
+
 /* Responsive Section */
 
 @media (max-width: 700px){

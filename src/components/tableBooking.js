@@ -8,14 +8,14 @@ const availableOccasions = [
 
 function TableBooking (props) {
 
-    const [date, setDate] = useState();
+    const [date, setDate] = useState("");
     const [time, setTime] = useState("17:00");
-    const [guests, setGuests] = useState();
+    const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("No Occasion");
 
     const [errorMessage, setErrorMessage] = useState("");
 
-    /*
+    
     const currentDate = new Date();
     const yyyy = currentDate.getFullYear();
     let mm = currentDate.getMonth() + 1;
@@ -26,8 +26,8 @@ function TableBooking (props) {
     if (dd < 10) {
         dd = "0"+dd;
     }
-    const formattaedToday = yyyy +"-"+ mm +"-"+ dd;
-    */
+    const formattedToday = yyyy +"-"+ mm +"-"+ dd;
+    
 
     const clearForm = () => {
         setDate("");
@@ -40,16 +40,15 @@ function TableBooking (props) {
         e.preventDefault();
 
         if (date !== "" && time !== "" && guests !== "" && occasion !== ""){
-            setErrorMessage("Your reservation has been sent!");
-            
+
             props.setAvailableTimes(props.availableTimes.filter(
                 (availableTime) => availableTime.time !== time
             ));
-
             clearForm();
+            setErrorMessage(<p className="successMessage">Your reservation has been sent!</p>);
         }
         else {
-            setErrorMessage("Please fill in all the fields!");
+            setErrorMessage(<p className="errorMessage">Please fill in all the fields!</p>);
         }
       }; 
 
@@ -67,7 +66,7 @@ function TableBooking (props) {
                 <hr/>
                 <form onSubmit={handleSubmit}>
                     <label for="res-date">Choose date</label>
-                    <input type="date" id="res-date" 
+                    <input type="date" id="res-date" min={formattedToday}
                         value={date}
                         onChange={(e) => { 
                             setDate(e.target.value); 
@@ -103,11 +102,6 @@ function TableBooking (props) {
                             <option value={item}>{item}</option>
                         ))}
                     </select>
-                    <hr/>
-                        <p>Choosen date: {date}</p>
-                        <p>Choosen time: {time}</p>
-                        <p>Choosen guests: {guests}</p>
-                        <p>Choosen Occasion: {occasion}</p>
                     <hr/>
                     <p>{errorMessage}</p>
                     <button type="submit">Make Your reservation</button>
