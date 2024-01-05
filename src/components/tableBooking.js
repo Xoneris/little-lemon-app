@@ -13,17 +13,6 @@ function TableBooking (props) {
     const [guests, setGuests] = useState();
     const [occasion, setOccasion] = useState("No Occasion");
 
-    /*const [availableTimes, setAvailableTimes] = useState(
-        [
-            {time: "17:00"},
-            {time: "18:00"},
-            {time: "19:00"},
-            {time: "20:00"},
-            {time: "21:00"},
-            {time: "22:00"}
-        ]
-    );*/
-
     const [errorMessage, setErrorMessage] = useState("");
 
     /*
@@ -71,7 +60,7 @@ function TableBooking (props) {
                 <hr/>
                 <p>Currently available times:</p>
                 <ul>
-                    {props.availableTimes.map((times) => {
+                    {props.availableTimes?.map((times) => {
                         return(<li>{times.time}</li>)
                     })}
                 </ul>
