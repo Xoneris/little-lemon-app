@@ -8,14 +8,15 @@ const availableOccasions = [
 
 function TableBooking (props) {
 
+    /* Setting a bunch of State */
     const [date, setDate] = useState("");
     const [time, setTime] = useState("17:00");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("No Occasion");
-
     const [errorMessage, setErrorMessage] = useState("");
 
-    
+    /* Getting today's date in a variable called formattedToday in a yyyy-mm-dd format.
+    It's used in the input type date so that you can only select dates from today onwards */
     const currentDate = new Date();
     const yyyy = currentDate.getFullYear();
     let mm = currentDate.getMonth() + 1;
@@ -28,7 +29,7 @@ function TableBooking (props) {
     }
     const formattedToday = yyyy +"-"+ mm +"-"+ dd;
     
-
+    /* Resetting the Form */
     const clearForm = () => {
         setDate("");
         setTime("17:00");
@@ -36,9 +37,11 @@ function TableBooking (props) {
         setOccasion("No Occasion");
     }
 
+    /* */
     const handleSubmit = (e) => { 
         e.preventDefault();
 
+        /* If any of the input's is empty an Error will display, otherwise the form will be submitted */
         if (date !== "" && time !== "" && guests !== "" && occasion !== ""){
 
             props.setAvailableTimes(props.availableTimes.filter(
@@ -77,9 +80,6 @@ function TableBooking (props) {
                         value={time}
                         onChange={e => setTime(e.target.value)}>
 
-                        {/*initialAvailableTimes.map((item) => (
-                            <option value={item}>{item}</option>
-                        ))*/}
                        {props.availableTimes.map((times) => {
                             return(<option value={times.time}>{times.time}</option>)
                         })}
@@ -87,7 +87,7 @@ function TableBooking (props) {
                     </select>
                     <hr/>
                     <label for="guests">Number of guests</label>
-                    <input type="number" placeholder="1" min="1" max="10" id="guests"
+                    <input type="number" placeholder="1-10" min="1" max="10" id="guests"
                         value={guests}
                         onChange={(e) => {
                             setGuests(e.target.value);
@@ -108,7 +108,6 @@ function TableBooking (props) {
                 </form>
             </div>
         </div>
-        
     );
 }
 
