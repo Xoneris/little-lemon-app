@@ -1,9 +1,10 @@
 import Navigation from "./navigation";
+import { Link } from "react-router-dom";
 
-function Header (props){
+function Header (){
     return (
         <header>
-            <img src="assets/Logo.svg" alt="Little Lemon Logo" />
+            <Link to="/" className="logo" ><img src="assets/Logo.svg" alt="Little Lemon Logo" /></Link>
             <Navigation />
         </header>
     );

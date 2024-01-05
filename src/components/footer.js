@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer (){
     return (
         <footer>
@@ -11,10 +13,10 @@ function Footer (){
                     <h2>Doormat Navigation</h2>
                     <hr/>
                     <ul>
-                        <li>Home</li>
+                        <li><Link to="/">Home</Link></li>
                         <li>About</li>
                         <li>Menu</li>
-                        <li>Reservations</li>
+                        <li><Link to="/reservations">Reservations</Link></li>
                         <li>Order Online</li>
                         <li>Login</li>
                     </ul>
@@ -22,9 +24,11 @@ function Footer (){
                 <section>
                     <h2>Contact</h2>
                     <hr/>
-                    Adress
-                    <br/>Phone
-                    <br/>Email
+                    <p>Little Lemon Restaurant</p>
+                    <p>SomeCoolStreet 42</p>
+                    <p>770 Chichago</p>
+                    <p>+1 (312) 509-6995.</p>
+                    <p>hello@littlelemon.com</p>
                 </section>
                 <section>
                     <h2>Social Media Links</h2>
@@ -37,7 +41,7 @@ function Footer (){
                     </ul>
                 </section>
             </div>
-            <p>Copyright Little Lemon Restaurant. 2023 All rights reserved.</p>
+            <p className="copyright">Copyright Little Lemon Restaurant. 2023 All rights reserved.</p>
         </footer>
     );
 }
