@@ -17,7 +17,6 @@ function Navigation (){
                     <li><Link to="/reservations">Reservations</Link></li>
                     <li>Order</li>
                     <li>Login</li>
-                    <li>{mobileNavBar == false ? "False" : "True"}</li>
                 </ul>  
             </div>
             <div id="mobile-view">
